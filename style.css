@@ -1,0 +1,44 @@
+/* チュートリアル削除 */
+div.card_card-container_3_Sbc {
+    display: none;
+}
+
+/* 以下はhtmlにcolorクラスがあるときのみ */
+
+/* グレースケール */
+html:not(.color) {
+    filter: grayscale(1);
+}
+
+/* ヘッダーの要素を削除 ロゴ画像は表示するが押せなくする */
+html:not(.color) div.gui_menu-bar-position_3U1T0 div {
+    display: none;
+}
+html:not(.color) div.gui_menu-bar-position_3U1T0 div:has(img#logo_img) {
+    display: flex;
+}
+html:not(.color) img#logo_img{
+    pointer-events: none;
+}
+
+/* 拡張機能ボタン削除 合わせてメニューバーを縦最大に */
+html:not(.color) div.gui_extension-button-container_b4rCs {
+    display: none;
+}
+html:not(.color) div.blocklyToolboxDiv {
+    height: 100% !important;
+}
+
+/* 背景選択削除 */
+html:not(.color) div.target-pane_stage-selector-wrapper_qekSW,
+html:not(.color) div.sprite-selector_add-button_1XCwG,
+html:not(.color) div[class*="sprite-selector-item_delete-button_"],
+nav[role="menu"] {
+    display: none;
+}
+
+/* タブ消去 */
+html:not(.color) li#react-tabs-2,
+html:not(.color) li#react-tabs-4 {
+    display: none;
+}

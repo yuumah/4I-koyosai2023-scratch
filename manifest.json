@@ -1,0 +1,11 @@
+{
+  "name": "4I-koyosai2023-scratch",
+  "version": "1.0.0.0",
+  "manifest_version": 3,
+  "description": "Scratchを白黒に",
+  "content_scripts": [{
+    "matches": ["https://scratch.mit.edu/projects/editor/*"],
+    "js": ["content.js"],
+    "css": ["style.css"]
+  }]
+}
