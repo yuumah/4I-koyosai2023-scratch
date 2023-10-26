@@ -5,3 +5,6 @@ document.onkeydown=e=>{
   }
   return true;
 }
+
+// ファイルを開く
+// document.querySelector(".menu_menu_3k7QT li:nth-child(2)").click();

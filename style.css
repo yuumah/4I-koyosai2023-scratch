@@ -3,7 +3,12 @@ div.card_card-container_3_Sbc {
     display: none;
 }
 
-/* 以下はhtmlにcolorクラスがあるときのみ */
+/* 以下はhtmlにcolorクラスがないときのみ適用 */
+
+/* CSSを勉強してる人でこのソースを見ている人へ (セレクターを一通り学んでいる人対象)
+CSSにネストの機能が追加されたので、実は以下の部分はより見やすく書けます。(`html:not(.color)`をまとめることができる)
+最新バージョンのブラウザならほとんど使えるはずです。今後CSSを書くときは参考にしてみてください。
+参考: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting */
 
 /* グレースケール */
 html:not(.color) {
@@ -40,5 +45,11 @@ nav[role="menu"] {
 /* タブ消去 */
 html:not(.color) li#react-tabs-2,
 html:not(.color) li#react-tabs-4 {
+    display: none;
+}
+
+/* 色選択 */
+html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(-2n+3),
+html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(-2n+3) + .goog-slider-horizontal{
     display: none;
 }
