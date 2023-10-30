@@ -1,10 +1,19 @@
-html=document.querySelector("html");
+const html=document.querySelector("html");
+
 document.onkeydown=e=>{
+  // Ctrl+Shift+Alt+Q
   if(e.altKey&&e.ctrlKey&&e.shiftKey&&e.code=="KeyQ"){
-    html.classList.toggle("color");return false;
+    if(true){ //html.classList.contains("color") || window.prompt("開発者専用操作です")=="2023"){
+      html.classList.toggle("color");return false;
+    }
   }
-  return true;
+  return html.classList.contains("color") || (/Numpad[0-9]|Digit[0-9]/.test(e.code)&&!e.altKey&&!e.ctrlKey&&!e.shiftKey);
 }
 
-// ファイルを開く
-// document.querySelector(".menu_menu_3k7QT li:nth-child(2)").click();
+document.oncontextmenu=e=>{
+  // ブロックを並べる領域以外での右クリックは禁止
+  return html.classList.contains("color") || e.target.closest(".injectionDiv")!==null
+}
+
+// ポップアップでやる
+// window.open("https://scratch.mit.edu/projects/editor/","_blank","scrollbars=yes,resizable=yes,fullscreen=yes")
