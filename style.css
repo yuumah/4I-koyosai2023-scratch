@@ -26,6 +26,12 @@ html:not(.color) img#logo_img{
     pointer-events: none;
 }
 
+/* コスチュームタブ・音声タブ消去 */
+html:not(.color) li#react-tabs-2,
+html:not(.color) li#react-tabs-4 {
+    display: none;
+}
+
 /* 拡張機能ボタン削除 合わせてメニューバーを縦最大に */
 html:not(.color) div.gui_extension-button-container_b4rCs {
     display: none;
@@ -34,22 +40,45 @@ html:not(.color) div.blocklyToolboxDiv {
     height: 100% !important;
 }
 
-/* 背景選択削除 */
+/* フィールド上のクリック、ドラッグ禁止 */
+html:not(.color) .stage-wrapper_stage-canvas-wrapper_3ewmd {
+    pointer-events: none;
+}
+
+/* スプライトメニュー変更禁止 入力欄の背景色も灰色にする */
+html:not(.color) .sprite-info_sprite-info_3EyZh {
+    pointer-events: none;
+}
+html:not(.color) .sprite-info_sprite-info_3EyZh input{
+    background-color: rgba(128,128,128,0.2)
+}
+
+/* スプライトメニュー一部消去 */
+html:not(.color) .sprite-info_row_1om5V:not(.sprite-info_row-primary_10JrS) {
+    display: none;
+}
+
+/* 背景選択部分・スプライト追加ボタン・スプライト削除ボタン・スプライト右クリックメニュー 削除 */
 html:not(.color) div.target-pane_stage-selector-wrapper_qekSW,
 html:not(.color) div.sprite-selector_add-button_1XCwG,
 html:not(.color) div[class*="sprite-selector-item_delete-button_"],
-nav[role="menu"] {
+html:not(.color) nav[role="menu"] {
     display: none;
 }
 
-/* タブ消去 */
-html:not(.color) li#react-tabs-2,
-html:not(.color) li#react-tabs-4 {
-    display: none;
+/* 定義ブロックを隠す */
+html:not(.color) g[data-shapes~="c-block"]:not([data-category]){
+    scale:0;
 }
 
-/* 色選択 */
+/* 色選択 明るさ以外削除 */
 html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(-2n+3),
 html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(-2n+3) + .goog-slider-horizontal{
     display: none;
 }
+
+/* 全消去メニュー削除 */
+/* 指定ミスによりコメントアウト 要修正! */
+/* html:not(.color) .blocklyContextMenu .goog-menuitem:nth-child(2n+3){
+    display: none;
+} */
