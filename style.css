@@ -87,9 +87,9 @@ html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(
 
 /* 全消去メニュー削除 */
 /* 指定ミスによりコメントアウト 要修正! */
-/* html:not(.color) .blocklyContextMenu .goog-menuitem:nth-child(2n+3){
+html:not(.color) .blocklyContextMenu .goog-menuitem:first-child:nth-last-child(5) ~ .goog-menuitem:nth-child(2n+3){
     display: none;
-} */
+}
 
 /* ゴールスプライト編集禁止 */
 html:not(.color) body:has(.blocklySvg .blocklyBlockCanvas g[data-category="sensing"]>g[data-argument-type="colour"]>path[fill="#ff0000"]) .gui_editor-wrapper_2DYcj {
