@@ -86,7 +86,6 @@ html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(
 }
 
 /* 全消去メニュー削除 */
-/* 指定ミスによりコメントアウト 要修正! */
 html:not(.color) .blocklyContextMenu .goog-menuitem:first-child:nth-last-child(5) ~ .goog-menuitem:nth-child(2n+3){
     display: none;
 }
