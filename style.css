@@ -3,6 +3,14 @@ div.card_card-container_3_Sbc {
     display: none;
 }
 
+/* 注意テキスト */
+html.color .menu-bar_main-menu_3wjWH::after {
+    content: '！展示スタッフ用画面';
+    color: yellow;
+    font-size: 2em;
+    margin-left: 3%;
+}
+
 /* 以下はhtmlにcolorクラスがないときのみ適用 */
 
 /* CSSを勉強してる人でこのソースを見ている人へ (セレクターを一通り学んでいる人対象)
@@ -82,3 +90,8 @@ html:not(.color) .blocklyDropDownContent div.scratchColourPickerLabel:nth-child(
 /* html:not(.color) .blocklyContextMenu .goog-menuitem:nth-child(2n+3){
     display: none;
 } */
+
+/* ゴールスプライト編集禁止 */
+html:not(.color) body:has(.blocklySvg .blocklyBlockCanvas g[data-category="sensing"]>g[data-argument-type="colour"]>path[fill="#ff0000"]) .gui_editor-wrapper_2DYcj {
+    pointer-events: none;
+}
