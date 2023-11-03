@@ -16,22 +16,9 @@ document.oncontextmenu=e=>{
   return html.classList.contains("color") || e.target.closest(".injectionDiv")!==null
 }
 
-/*
-const NG_Label=[];
-const NG_dataid=[];
-const NG_
-
-const canvas_elements = document.querySelectorAll(".blocklyFlyout .blocklyBlockCanvas > *");
-let blocks = {};
-let tmp = [];
-canvas_elements.forEach(elem=>{
-  tmp.push(elem);
-  if(elem.classList.contains("blocklyFlyoutLabel") || elem.classList.contains("blocklyDraggable") || elem.classList.contains("blocklyFlyoutButton")){
-    blocks[elem.getAttribute("transform").match(/translate\(\d+,(\d+)\)/)[1]] = tmp;
-    tmp = [];
-  }
-})
-
-let keys=Object.keys(blocks)
-keys.sort((x,y)=>x-y)
-*/
+// 戻る無効
+window.addEventListener("popstate", function (e) {
+  history.pushState(null, null, null);
+  return;
+});
+history.pushState(null, null, null);
